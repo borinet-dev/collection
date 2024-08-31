@@ -2,6 +2,20 @@
 <html lang="ko">
 
 <head>
+	<script>
+		(function() {
+			// 사용자 에이전트 정보를 가져옵니다.
+			var userAgent = navigator.userAgent.toLowerCase();
+
+			// 브라우저가 크롬인지 확인합니다.
+			var isChrome = /chrome/.test(userAgent) && !/edge|edg|opr/.test(userAgent);
+
+			// 크롬이 아니라면 팝업 창을 띄웁니다.
+			if (!isChrome) {
+				alert('이 페이지는 크롬에 최적화되어 있습니다. 크롬 브라우저에서 접속해 주세요.');
+			}
+		})();
+	</script>
 	<style>
 		.count-color {
 			color: red;
@@ -519,7 +533,7 @@
 	<tr>
 		<td>오컬트 매니아</td>
 		<td>이동속도 +5</td>
-		<td>+5 카샤 회색곰의 발톱, +5 저주 받은 호즈, +4 저주 받은 튜닉, 부두인형, +4 푸른수정 해골</td>
+		<td>+5 구울의 지팡이, +5 저주 받은 호즈, +4 저주 받은 튜닉, 부두인형, +4 푸른수정 해골</td>
 	</tr>
 	<tr>
 		<td>패션피플의 자질</td>
@@ -564,7 +578,7 @@
 	<tr>
 		<td>거인의 발걸음</td>
 		<td>바람 속성 +10, 대지 내성 +10</td>
-		<td>+5 쉬르노엔의 부츠, +5 쉬르노엔의 부츠, +5 나히르의 그림, +9 헤비 둠해머</td>
+		<td>+5 쉬르노엔의 부츠(중갑용), +5 쉬르노엔의 부츠(경갑용), +5 쉬르노엔의 부츠(로브용), +9 헤비 둠해머</td>
 	</tr>
 	<tr>
 		<td>총명한 마법사</td>
