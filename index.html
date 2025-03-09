@@ -38,6 +38,32 @@
 		.s1 { text-shadow: 4px 4px 5px black; }
 		.s2 { text-shadow: 2px 2px 2px black; }
 		.s3 { text-shadow: 1px 1px 1px black; }
+		/* 기본 네비게이션 배경 및 텍스트 색상 설정 */
+        .bg-2a2a2a {
+            background-color: #2a2a2a !important;
+        }
+
+        /* 기본 링크 색상 설정 */
+        .bg-2a2a2a .nav-link {
+            color: white !important;
+            transition: color 0.3s ease-in-out; /* 부드러운 색상 전환 효과 */
+        }
+
+        /* 마우스를 올렸을 때 색상이 더 밝아지도록 설정 */
+        .bg-2a2a2a .nav-link:hover {
+            color: #90ee90 !important; /* 연한 회색 */
+        }
+
+		.border-bottom {
+	    color: red !important;
+	    text-decoration: none; /* 기본 밑줄 제거 */
+	    transition: color 0.3s ease-in-out; /* 부드러운 색상 전환 */
+		}
+
+		.border-bottom:hover {
+		    color: darkred !important; /* 마우스 오버 시 진한 빨간색 */
+		}
+
 	</style>
 	<meta charset="utf-8">
 	<title>와썹</title>
@@ -46,7 +72,7 @@
 	<meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="https://raw.githubusercontent.com/borinet-dev/img/main/wassub_icon.ico" rel="icon">
+    <link href="https://borinet-dev.github.io/img/wassub_icon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,9 +84,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="https://borinet-dev.github.io/css/css/animate/animate.min.css" rel="stylesheet">
-    <link href="https://borinet-dev.github.io/css/css/owl.carousel.css" rel="stylesheet">
-    <link href="https://borinet-dev.github.io/css/css/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="https://borinet-dev.github.io/css/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="https://borinet-dev.github.io/css/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://borinet-dev.github.io/css/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="https://borinet-dev.github.io/css/css/bootstrap.min.css" rel="stylesheet">
@@ -71,7 +97,7 @@
 	<link href="https://borinet-dev.github.io/css/css/style3.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-color: #2a2a2a;">
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
@@ -79,7 +105,7 @@
     <!-- Spinner End -->
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <nav class="navbar navbar-expand-lg bg-2a2a2a navbar-light sticky-top p-0">
         <a href="https://l2wassub.org" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <img src="https://raw.githubusercontent.com/borinet-dev/img/main/logo_wassub.png" style="max-width: auto; height: auto;">
         </a>
@@ -108,20 +134,20 @@
 
     <!-- Start -->
 <div id="viewer" class="white viewer_style rd_nav_blk">
-	<div id="bd_7139_123793" class="bd clear   hover_effect" data-default_style="viewer" data-bdfilestype="" data-bdnavside="N" style="max-width:px">
+	<div style="background-color: #2a2a2a; color: white; id="bd_7139_123793" class="bd clear   hover_effect" data-default_style="viewer" data-bdfilestype="" data-bdnavside="N" style="max-width:px">
 	<article>
 
 		<div class="document_123793_4 xe_content">
 <p><span style="color: rgb(31, 31, 31); font-family: -apple-system, BlinkMacSystemFont, Roboto, &quot;맑은 고딕&quot;, &quot;Malgun Gothic&quot;, &quot;Microsoft JhengHei&quot;, meiryo, &quot;MS PGothic&quot;, 돋움, Dotum, sans-serif; font-size: 15px; box-sizing: border-box; font-weight: bolder;"><span style="box-sizing: border-box; color: rgb(51, 102, 153);">
-<div style="background-color: rgb(255, 255, 255); box-sizing: border-box; color: rgb(31, 31, 31); font-family: -apple-system, BlinkMacSystemFont, Roboto, &quot;맑은 고딕&quot;, &quot;Malgun Gothic&quot;, &quot;Microsoft JhengHei&quot;, meiryo, &quot;MS PGothic&quot;, 돋움, Dotum, sans-serif; font-size: 25px;">
+<div style="box-sizing: border-box; color: rgb(31, 31, 31); font-family: -apple-system, BlinkMacSystemFont, Roboto, &quot;맑은 고딕&quot;, &quot;Malgun Gothic&quot;, &quot;Microsoft JhengHei&quot;, meiryo, &quot;MS PGothic&quot;, 돋움, Dotum, sans-serif; font-size: 25px;">
 <span style="color: rgb(51, 102, 153);">● 컬렉션 시스템</span></div><br>
-<div style="background-color: rgb(255, 255, 255); box-sizing: border-box; color: rgb(31, 31, 31); font-family: -apple-system, BlinkMacSystemFont, Roboto, &quot;맑은 고딕&quot;, &quot;Malgun Gothic&quot;, &quot;Microsoft JhengHei&quot;, meiryo, &quot;MS PGothic&quot;, 돋움, Dotum, sans-serif; font-size: 13px;">
+<div style="box-sizing: border-box; color: white; font-family: -apple-system, BlinkMacSystemFont, Roboto, &quot;맑은 고딕&quot;, &quot;Malgun Gothic&quot;, &quot;Microsoft JhengHei&quot;, meiryo, &quot;MS PGothic&quot;, 돋움, Dotum, sans-serif; font-size: 13px;">
 &nbsp;&nbsp; - 획득한 아이템을 소모하여 컬렉션에 등록 할 수 있으며, 컬렉션 완성 시 부가적인 옵션 효과가 캐릭터에게 제공된다.<br>
 &nbsp;&nbsp; - 완성된 컬렉션 효과는 같은 계정 내 모든 캐릭터에게 적용된다.<br>
 
 <div style="box-sizing: border-box;">&nbsp;</div>
 
-<div data-contents-type="text" style="box-sizing: border-box; font-family: &quot;Noto Sans&quot;, &quot;Noto Sans KR&quot;, -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgba(0, 0, 0, 0.93); font-size: 18px; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgb(0, 112, 192); letter-spacing: 0px !important;"><span style="box-sizing: border-box; font-weight: 700; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 14px; letter-spacing: 0px !important;">
+<div data-contents-type="text" style="box-sizing: border-box; font-family: &quot;Noto Sans&quot;, &quot;Noto Sans KR&quot;, -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 18px; "><span style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgb(0, 112, 192); letter-spacing: 0px !important;"><span style="box-sizing: border-box; font-weight: 700; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 14px; letter-spacing: 0px !important;">
 &nbsp;* 가이드 북 -> 컬렉션 메뉴를 통하여 컬렉션을 확인 및 등록할 수 있습니다.</span></span></div>
 <img src="https://github.com/borinet-dev/collection/blob/main/ones.png?raw=true" width="650" height="415">
 <img src="https://github.com/borinet-dev/collection/blob/main/two.png?raw=true" width="650" height="415">
@@ -134,7 +160,7 @@
 &nbsp;&nbsp; - 컬렉션 현황 및 효과는 계정 내 모든 캐릭터가 공유가 가능하다.<br>
 &nbsp;&nbsp; - 컬렉션에 아이템을 등록하면 해당 아이템은 소멸되며, 등록된 아이템은 추출할 수 없다.<br><br>
 <p>
-<div data-contents-type="text" style="box-sizing: border-box; font-family: &quot;Noto Sans&quot;, &quot;Noto Sans KR&quot;, -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgba(0, 0, 0, 0.93); font-size: 18px; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgb(0, 112, 192); letter-spacing: 0px !important;"><span style="box-sizing: border-box; font-weight: 700; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 14px; letter-spacing: 0px !important;">
+<div data-contents-type="text" style="box-sizing: border-box; font-family: &quot;Noto Sans&quot;, &quot;Noto Sans KR&quot;, -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgba(0, 0, 0, 0.93); font-size: 18px; "><span style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgb(0, 112, 192); letter-spacing: 0px !important;"><span style="box-sizing: border-box; font-weight: 700; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 14px; letter-spacing: 0px !important;">
 &nbsp;* 컬렉션 효과</span></span></div></p>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -151,7 +177,7 @@
 			padding: 8px;
 		}
 		th {
-			background-color: #f2f2f2;
+			background-color: #000000;
 		}
 	</style>
 <table><tbody>
@@ -800,11 +826,56 @@
 		<td>MP 재생 +35, 공격력 +520</td>
 		<td>+6 다이너스티 튜닉, +6 다이너스티 가이터, +6 다이너스티 레더 헬멧, +6 다이너스티 시길</td>
 	</tr>
+	<tr>
+		<td>한손검은 더이상 두렵지 않아</td>
+		<td>PVP - 한손검 무기 내성 +10%</td>
+		<td>+6 엘븐소드, +7 싸울아비 장검, +8 다크 레기온, +9 페리 엘 소드, +10 아포칼립스 커터</td>
+	</tr>
+	<tr>
+		<td>양손검으로 날 상처입히게?</td>
+		<td>PVP - 양손검 무기 내성 +10%</td>
+		<td>+6 클레이모어, +7 버서커 블레이드, +8 소드 오브 이포스, +9 페더아이 블레이드, +10 아포칼립스 슬래셔</td>
+	</tr>
+	<tr>
+		<td>이도류정도는 안아프지</td>
+		<td>PVP - 이도류 무기 내성 +10%</td>
+		<td>+6 스파인본 소드*엘븐소드, +7 레이드 소드*레이드 소드, +8 탈룸 블레이드*다마스커스, +9 페리 엘 듀얼 소드, +10 아포칼립스 듀얼소드</td>
+	</tr>
+	<tr>
+		<td>단검으로 뭐하게?</td>
+		<td>PVP - 단검류 무기 내성 +10%</td>
+		<td>+6 메인거쉬, +7 크리스탈 단검, +8 나가 스톰, +9 스컬 엣지, +10 아포칼립스 셰이퍼</td>
+	</tr>
+	<tr>
+		<td>둔기로 오크 뚝빼기나 깨지?</td>
+		<td>PVP - 둔기류 무기 내성 +10%</td>
+		<td>+6 타바르, +7 야크샤 메이스, +8 베헤모스의 소리굽쇠, +9 이블디어티 마울, +10 아포칼립스 어벤져</td>
+	</tr>
+	<tr>
+		<td>격투? 난 권투!</td>
+		<td>PVP - 격투 무기 내성 +10%</td>
+		<td>+6 스캘럽 자마다르, +7 그레이트파타, +8 소베크 허리케인, +9 옥토 클로, +10 아포칼립스 파이터</td>
+	</tr>
+	<tr>
+		<td>창으로 몰이나 해!</td>
+		<td>PVP - 창 무기 내성 +10%</td>
+		<td>+6 글레이브, +7 오키쉬 폴액스, +8 타이폰 스피어, +9 더블토파 스피어, +10 아포칼립스 스토머</td>
+	</tr>
+	<tr>
+		<td>활잽이? 날 맞출수나 있고?</td>
+		<td>PVP - 활 무기 내성 +10%</td>
+		<td>+6 강화롱보우, +7 에머넌스보우, +8 샤이드 보우, +9 스컬 카르니움 보우, +10 아포칼립스 스로워]</td>
+	</tr>
+	<tr>
+		<td>마법쓰기전에 순삭!</td>
+		<td>PVP - 공격 마법 내성 +10%</td>
+		<td>+6 피의 주문서, +7 구울의 지팡이, +8 핸드 오브 카브리오, +9 블랙비지즈, +10 아포칼립스 캐스터</td>
+	</tr>
 </tbody></table>
 
 </div>
 </div>
-</div></div>
+</div></div><br><br>
    <!-- End -->
         
 
