@@ -17,62 +17,28 @@
 		})();
 	</script>
 	<style>
-		.count-color {
-			color: red;
-			text-shadow: 2px 2px 2px black;
-		}
-
-		.info-color {
-			color: yellow;
-			text-shadow: 2px 2px 2px black;
-		}
-		.info-color2 {
-			color: red;
-			text-shadow: 1px 1px 1px black;
-		}
-		.info-color3 {
-			color: black;
-			text-shadow: 1px 1px 1px gray;
-		}
-
+		.count-color { color: red; text-shadow: 2px 2px 2px black; }
+		.info-color { color: yellow; text-shadow: 2px 2px 2px black; }
+		.info-color2 { color: red; text-shadow: 1px 1px 1px black; }
+		.info-color3 { color: black; text-shadow: 1px 1px 1px gray; }
 		.s1 { text-shadow: 4px 4px 5px black; }
 		.s2 { text-shadow: 2px 2px 2px black; }
 		.s3 { text-shadow: 1px 1px 1px black; }
-		/* 기본 네비게이션 배경 및 텍스트 색상 설정 */
-        .bg-2a2a2a {
-            background-color: #2a2a2a !important;
-        }
-
-        /* 기본 링크 색상 설정 */
-        .bg-2a2a2a .nav-link {
-            color: white !important;
-            transition: color 0.3s ease-in-out; /* 부드러운 색상 전환 효과 */
-        }
-
-        /* 마우스를 올렸을 때 색상이 더 밝아지도록 설정 */
-        .bg-2a2a2a .nav-link:hover {
-            color: #90ee90 !important; /* 연한 회색 */
-        }
-
-		.border-bottom {
-	    color: red !important;
-	    text-decoration: none; /* 기본 밑줄 제거 */
-	    transition: color 0.3s ease-in-out; /* 부드러운 색상 전환 */
-		}
-
-		.border-bottom:hover {
-		    color: darkred !important; /* 마우스 오버 시 진한 빨간색 */
-		}
-
+		.bg-2a2a2a { background-color: #2a2a2a !important; }
+		.bg-2a2a2a .nav-link { color: white !important; transition: color 0.3s ease-in-out; }
+		.bg-2a2a2a .nav-link:hover { color: #90ee90 !important; }
+		.border-bottom { color: red !important; text-decoration: none; transition: color 0.3s ease-in-out; }
+		.border-bottom:hover { color: darkred !important; }
+		body { background-color: #2a2a2a; color: white; font-family: sans-serif; line-height: 1.6; }
+		table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+		th, td { border: 1px solid white; padding: 8px; }
+		th { background-color: #444; }
+		h3 { margin-top: 30px; color: #ffd700; }
 	</style>
 	<meta charset="utf-8">
-	<title>나비</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta content="" name="keywords">
 	<meta content="" name="description">
-
-    <!-- Favicon -->
-    <link href="https://borinet-dev.github.io/img/wassub_icon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,22 +71,37 @@
     <!-- Spinner End -->
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-2a2a2a navbar-dark sticky-top p-0">
-        <a href="https://l2jnavi.org" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <img src="https://raw.githubusercontent.com/borinet-dev/img/main/logo_wassub.png" style="max-width: auto; height: auto;">
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-				<a onclick="window.open('https://discord.gg/u7MJEsPpUJ')" style="cursor:pointer;" class="nav-item nav-link"><b>디스코드 입장하기</b></a>
-                <a onclick="window.open('../../AccountClassic/', '', 'location=no, width=730, height=650')" style="cursor:pointer;" class="nav-item nav-link"><b>계정관리</b></a>
-				<a onclick="window.open('../../downloads/', '', 'location=no, width=850, height=439, scrollbars=yes')" style="cursor:pointer;" class="nav-item nav-link"><b>다운로드</b></a>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar End -->
+		<!-- Header Start -->
+			<div id="header-placeholder"></div>
+			<script>
+			  (function () {
+				const url = "https://borinet-dev.github.io/head/header.html?ver=" + Date.now();
+				fetch(url)
+				  .then(r => r.text())
+				  .then(html => {
+					const holder = document.getElementById("header-placeholder");
+					holder.innerHTML = html;
+
+					// header.html에서 전달한 파비콘을 <head>에 반영
+					const fav = holder.querySelector('link[rel="navi-favicon"]');
+					if (fav) {
+					  let headIcon = document.head.querySelector("link[rel~='icon']");
+					  if (!headIcon) {
+						headIcon = document.createElement("link");
+						headIcon.rel = "icon";
+						document.head.appendChild(headIcon);
+					  }
+					  headIcon.href = fav.getAttribute("href");
+					}
+					// 제목 반영
+					const titleMeta = holder.querySelector('meta[name="web-title"]');
+					if (titleMeta) document.title = titleMeta.content;
+				  })
+				  .catch(console.error);
+			  })();
+			</script>
+		<!-- Header End -->
+	<!-- Navbar End -->
 
 
     <!-- Page Header Start -->
@@ -138,23 +119,22 @@
 	<article>
 
 		<div class="document_123793_4 xe_content">
-<p><span style="color: rgb(31, 31, 31); font-family: -apple-system, BlinkMacSystemFont, Roboto, &quot;맑은 고딕&quot;, &quot;Malgun Gothic&quot;, &quot;Microsoft JhengHei&quot;, meiryo, &quot;MS PGothic&quot;, 돋움, Dotum, sans-serif; font-size: 15px; box-sizing: border-box; font-weight: bolder;"><span style="box-sizing: border-box; color: rgb(51, 102, 153);">
 <div style="box-sizing: border-box; color: rgb(31, 31, 31); font-family: -apple-system, BlinkMacSystemFont, Roboto, &quot;맑은 고딕&quot;, &quot;Malgun Gothic&quot;, &quot;Microsoft JhengHei&quot;, meiryo, &quot;MS PGothic&quot;, 돋움, Dotum, sans-serif; font-size: 25px;">
-<span style="color: rgb(51, 102, 153);">● 컬렉션 시스템</span></div><br>
+<span style="color: rgb(255, 255, 0);">● 컬렉션 시스템</span></div><br>
 <div style="box-sizing: border-box; color: white; font-family: -apple-system, BlinkMacSystemFont, Roboto, &quot;맑은 고딕&quot;, &quot;Malgun Gothic&quot;, &quot;Microsoft JhengHei&quot;, meiryo, &quot;MS PGothic&quot;, 돋움, Dotum, sans-serif; font-size: 13px;">
 &nbsp;&nbsp; - 획득한 아이템을 소모하여 컬렉션에 등록 할 수 있으며, 컬렉션 완성 시 부가적인 옵션 효과가 캐릭터에게 제공된다.<br>
 &nbsp;&nbsp; - 완성된 컬렉션 효과는 같은 계정 내 모든 캐릭터에게 적용된다.<br>
 
 <div style="box-sizing: border-box;">&nbsp;</div>
 
-<div data-contents-type="text" style="box-sizing: border-box; font-family: &quot;Noto Sans&quot;, &quot;Noto Sans KR&quot;, -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 18px; "><span style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgb(0, 112, 192); letter-spacing: 0px !important;"><span style="box-sizing: border-box; font-weight: 700; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 14px; letter-spacing: 0px !important;">
+<div data-contents-type="text" style="box-sizing: border-box; font-family: &quot;Noto Sans&quot;, &quot;Noto Sans KR&quot;, -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 18px; "><span style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 0); letter-spacing: 0px !important;"><span style="box-sizing: border-box; font-weight: 700; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 14px; letter-spacing: 0px !important;">
 &nbsp;* 가이드 북 -> 컬렉션 메뉴를 통하여 컬렉션을 확인 및 등록할 수 있습니다.</span></span></div>
 <img src="https://github.com/borinet-dev/collection/blob/main/1.png?raw=true" width="650" height="415"><br>
 컬렉션 목록에서 완료된 컬렉션과 등록이 가능한 컬렉션. 그리고 진행중인 컬렉션을 확인할 수 있습니다.<br><br>
 <img src="https://github.com/borinet-dev/collection/blob/main/2.png?raw=true" width="650" height="415"><br>
 등록이 가능한 컬렉션으로 이동하면 개별아이템을 등록할 수 있으며, 모두 등록이 완료되면 컬렉션 효과를 획득할 수 있습니다.<br><br>
 <br><br>
-<span style="box-sizing: border-box; overflow-wrap: break-word; word-break: keep-all; color: rgb(153, 108, 63); letter-spacing: 0px !important;">※ 주의사항 ※&nbsp;</span>
+<span style="box-sizing: border-box; overflow-wrap: break-word; word-break: keep-all; color: rgb(255, 255, 0); letter-spacing: 0px !important;">※ 주의사항 ※&nbsp;</span>
 <br>
 &nbsp;&nbsp; - 컬렉션에 등록을 요구하는 모든 아이템을 보유하면 [등록] 버튼이 나타난다.<br>
 &nbsp;&nbsp; - 장착 중인 아이템은 컬렉션에 등록할 수 없다.<br>
@@ -162,7 +142,7 @@
 &nbsp;&nbsp; - 컬렉션 현황 및 효과는 계정 내 모든 캐릭터가 공유가 가능하다.<br>
 &nbsp;&nbsp; - 컬렉션에 아이템을 등록하면 해당 아이템은 소멸되며, 등록된 아이템은 추출할 수 없다.<br><br>
 <p>
-<div data-contents-type="text" style="box-sizing: border-box; font-family: &quot;Noto Sans&quot;, &quot;Noto Sans KR&quot;, -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgba(0, 0, 0, 0.93); font-size: 18px; "><span style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgb(0, 112, 192); letter-spacing: 0px !important;"><span style="box-sizing: border-box; font-weight: 700; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 14px; letter-spacing: 0px !important;">
+<div data-contents-type="text" style="box-sizing: border-box; font-family: &quot;Noto Sans&quot;, &quot;Noto Sans KR&quot;, -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgba(0, 0, 0, 0.93); font-size: 18px; "><span style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgb(255, 125512, 0); letter-spacing: 0px !important;"><span style="box-sizing: border-box; font-weight: 700; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-size: 14px; letter-spacing: 0px !important;">
 &nbsp;* 컬렉션 효과</span></span></div></p>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -909,8 +889,7 @@
 	<script src="https://borinet-dev.github.io/css/lib/isotope/isotope.pkgd.min.js"></script>
 	<script src="https://borinet-dev.github.io/css/lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="https://borinet-dev.github.io/css/js/main.js"></script>
+	<!-- Template Javascript -->
+	<script src="https://borinet-dev.github.io/css/js/main.js"></script>
     </body>
 </html>
-
